@@ -17,6 +17,10 @@ public class CreateXmlWithSimple {
         StringWriter sw = new StringWriter();
         serializer.write(customers, sw);
 
+        File file = new File("./output/customersOutput.xml");
+        serializer.write(customers, file);
+
+
         System.out.println(sw.toString());
     }
 }
